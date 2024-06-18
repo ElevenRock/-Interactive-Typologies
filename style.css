@@ -8,12 +8,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-/* * {
+/* 
+ * {
     background: #000 !important;
     color: #0f0 !important;
     outline: solid #f00 1px !important;
-} */
+}  */
 
 
 #myBtn {
@@ -194,6 +194,10 @@ body {
 section {
     height: 100vh;
 
+}
+
+.credits {
+    width: 50%;
 }
 
 .s1 { background-color: #daf445; }
