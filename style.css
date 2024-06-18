@@ -8,12 +8,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* 
- * {
-    background: #000 !important;
-    color: #0f0 !important;
-    outline: solid #f00 1px !important;
-}  */
 
 
 #myBtn {
@@ -187,6 +181,37 @@ body {
     top: -109px;
 
 }
+
+@keyframes spin {
+    to {
+      transform: rotateY(5turn);
+    }
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: scroll()) {
+      div {
+        animation: spin linear both;
+        animation-timeline: scroll();
+      } 
+    }
+  }
+  
+  @layer demo.support {
+    body {
+      /* give us something to scroll */
+      min-block-size: 300dvh;
+    }
+    
+      div {
+        position: fixed;
+        inset: 0;
+        display: grid;
+        place-content: baseline;
+        justify-content: start;
+    }
+  }
+
 
 
 /* BACKGROUND COLOR BELOW */
